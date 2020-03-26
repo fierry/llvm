@@ -4787,3 +4787,12 @@ close the handle. It is also assumed to require an open handle to work with.
   zx_status_t zx_handle_close(zx_handle_t handle [[clang::release_handle]]);
   }];
 }
+
+def FierryAsyncDocs : Documentation {
+  let Category = DocCatFunction;
+  let Content = [{
+A function declared as ``[[async]]`` will be translated into sync & async gateway.
+Async version will run through ::fierry::ops.
+  }];
+}
+

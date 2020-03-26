@@ -3513,3 +3513,10 @@ def ReleaseHandle : InheritableParamAttr {
   let Subjects = SubjectList<[ParmVar]>;
   let Documentation = [ReleaseHandleDocs];
 }
+
+def FierryAsync : InheritableAttr {
+  let Spellings = [CXX11<"", "async", 201907>];
+  let Subjects = SubjectList<[Function]>;
+  let Documentation = [FierryAsyncDocs];
+}
+

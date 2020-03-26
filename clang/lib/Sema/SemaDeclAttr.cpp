@@ -7460,6 +7460,10 @@ static void ProcessDeclAttribute(Sema &S, Scope *scope, Decl *D,
   case ParsedAttr::AT_UseHandle:
     handleHandleAttr<UseHandleAttr>(S, D, AL);
     break;
+
+  case ParsedAttr::AT_FierryAsync:
+    handleSimpleAttribute<FierryAsyncAttr>(S, D, AL);
+    break;
   }
 }
 
