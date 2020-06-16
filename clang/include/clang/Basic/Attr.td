@@ -3520,3 +3520,9 @@ def FierryAsync : InheritableAttr {
   let Documentation = [FierryAsyncDocs];
 }
 
+def FierryDependency : InheritableAttr {
+  let Spellings = [CXX11<"", "dependency", 201907>];
+  let Subjects = SubjectList<[Function]>;
+  let Documentation = [FierryDependencyDocs];
+}
+

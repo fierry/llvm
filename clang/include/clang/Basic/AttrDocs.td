@@ -4796,3 +4796,11 @@ Async version will run through ::fierry::ops.
   }];
 }
 
+def FierryDependencyDocs : Documentation {
+  let Category = DocCatFunction;
+  let Content = [{
+A function declared as ``[[dependency]]`` will be translated into synchronous getter once the object is fully created.
+Previous implementation of this function will move into dependency_callback, execute when the object is preparing its dependences.
+  }];
+}
+
